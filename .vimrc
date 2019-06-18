@@ -1,8 +1,3 @@
-filetype plugin indent on
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
 syntax on
 
 function! PythonSettings()
@@ -17,3 +12,11 @@ function! PythonSettings()
         setlocal foldnestmax=2
 endfunction
 autocmd FileType python call PythonSettings()
+
+call plug#begin('~/.vim/plugged')
+Plug 'pearofducks/ansible-vim'
+Plug 'ledger/vim-ledger'
+Plug 'ciaranm/securemodelines'
+call plug#end()
+
+set nomodeline
